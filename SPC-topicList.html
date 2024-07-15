@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>                                    <!-- open html tag: required  -->
+
+  <head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>  
+      
+      <!-- open page header: required -->
+    <title>SPC</title>      <!-- page title appears on the tab -->
+    
+  <style>   <!-- css style file -->
+        
+      body{
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+          }
+        
+      div{
+         font-family: Verdana, sans-serif;
+         color: rebeccapurple;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+      p{
+         font-family: Verdana, sans-serif;
+         color: black;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+    	 h1, h2, h3, h4, h5, btn {
+		         font-family: Verdana, sans-serif; 
+             /*font-weight: bold;*/
+             font-variant: small-caps;	
+           }
+
+.collapsible {
+  background-color: white;
+  color: purple;
+  cursor: pointer;
+  padding: -2px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+      
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #451952;
+  color: gold;
+  text-align: left;
+  border-radius: 6px;
+  padding: 19px 19px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -1px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}  
+</style>
+ 
+     
+      
+  </head>     <!-- close page header: required -->
+  
+  <!-- All contents of the web page MUST be placed between <body> </body> -->
+  
+  <body>   <!-- open html body: required -->
+  <BR><BR>
+  <table>
+      <tr>
+          <td>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+
+<div>     
+    
+<center><h2>Statistical Process Control</h2>
+    <h3>Tentative Topics</h3></center>
+<hr><br>
+    
+<b>Week 1: Introduction and Probability Review</b>
+    <ul>
+	<li> Introduction to SPC
+	<li> Concepts of SPC and Quality
+	<li> Quality Improvement in Business Environment
+	<li> SPC as an analytic tool in the big data era
+	<li> Software
+        <ul>
+	    <li> Install R, Rstudio, and LaTex.
+	    <li> Create a SAS Account to use SAS OnDemand (SAS Studio)
+        </ul>
+	<li> Review of Probability Distributions
+        <ul>
+	    <li> Continuous distributions: normal related distributions
+	    <li>Discrete distributions: binomial and Poisson distributions
+        </ul>
+    </ul>
+    
+    <b>Week 2: Numeric Characteristics of Processes and Inferences</b>
+    <ul>
+	<li> Sampling distributions about sample means and proportions
+	<li> Distribution of process characteristics and parameter estimation
+	<li> One- and two-sample problems
+	<li> Type I and type II error
+	<li> Operating characteristic (OC) curve
+    </ul>
+    
+    <b>Week 3: Methods of Statistical Process Control</b>
+    <ul>
+	<li> Quality Variation: Random and Assignable Causes
+	<li> Components of statistical control chart
+	<li> Types control charts: variable and attributes
+	<li> Implementing SPC
+	<li> SPC in the Non-manufacturing industry such as financial and environmental, etc.
+    </ul>
+    
+    <b>Week 4: Control Chart for Variable</b>
+    <ul>
+	<li> Definitions
+	<li> ARL - average run length
+	<li> LSL and USL - Lower and upper specification limits
+	<li> PCI - Process capability index
+	<li> Charting x&#772; and R (range)
+	<li> Charting x&#772; and s (standard deviation)
+	<li> Shewhart Control Chart
+    </ul>
+    
+    <b>Week 5: Control Chart for Attributes</b>
+    <ul>
+	<li> Control chart for proportions: p-chart
+	<li> Control chart for counts/frequencies: c-chart
+	<li> Control chart of counts/frequencies: u-charts
+	<li> Choices between variables and attributes control charts
+    </ul>
+    
+    <b>Week 6: Process Capability Analysis</b>
+    <ul>
+	<li> Process capability analysis using a histogram
+	<li> Process capability indexes (PCI)
+        <ul>
+	     <li> Basic C<sub>p</sub> - first-generation PCI
+	     <li> C<sub>pk</sub> and C<sub>pm</sub> - second-generation PCIs
+	     <li> C<sub>pkm</sub> -Third generation PCI
+         </ul>
+	<li> Process capability analysis using a control chart
+	<li> Setting specification limits for discrete processes
+	<li> Natural tolerance limits of a process
+    </ul>
+    
+    <b>Week 7: CUSUM and EWMV Control Charts</b>
+    <ul>
+	<li> CUMSUM control chart
+	<li> EWMV control chart
+	<li> MA control chart
+    </ul>
+    
+    <b>Week 8: Other Univariate Process Control Techniques</b>
+    <ul>
+	<li> SPC for short production runs
+	<li> Modified and acceptance control charts
+	<li> Monitoring multiple stream processes
+	<li> Monitoring auto-correlated processes
+	<li> Change-point models in the process monitoring
+	</ul>
+    
+    <b>Week 9: Acceptance Sampling</b>
+    <ul>
+	<li> The rationale of acceptance-sampling
+	<li> Single-sample plans for attributes
+	<li> Double, multiple, and sequential sampling
+	<li> Acceptance sampling for variables
+	<li> Continuous sampling
+    </ul>
+    
+    <b>Week 10: New Developments in SPC</b>
+    <ul>
+	<li> Strategies for developing new PCIs and control charts
+	<li> Bootstrap specification limits determination
+	<li> PCIs as algorithms of feature extraction
+	<li> Auto-correlated PCI processes
+	<li> PCI-based scalable algorithms for anomaly detection
+	<li> Open problems - potential research topics
+    </ul>
+    
+    <b>Week 11: Case Study: SPC in Business and Financial Processes</b>
+    <ul>
+	<li> SPC for non-normal processes
+	<li> Modeling and monitoring various KPIs
+	<li> Supplier selection using quality metrics
+	<li> One-sided PCIs
+	<li> Application of PCI-based algorithms in financial risk modeling
+	<li> Creating credit card fraud index with PCI
+	<li> Unsupervised anomaly detection
+    </ul>
+    
+    <b>Week 12: Case Study: SPC in Environmental Processes</b>
+    <ul>
+	<li> Definition of numerical characteristics of interests in an environmental process
+	<li> Skewed and left-censored environmental process
+	<li> PCI control charts
+	<li> Heterogeneous dependent and independent processes - PCI standardization
+	<li> Real-time anomaly detection, correction, prediction in environmental processes
+    </ul>
+    
+    <b>Week 13: SPC in Healthcare and Clinical Processes</b>
+    <ul>
+	<li> Status of the healthcare performance monitoring, control, and prediction
+	<li> Quantifying and modeling of healthcare processes
+	<li> SPC technique selection and assignable cause identification
+	<li> Control chart in healthcare and public health surveillance
+	<li> Misuse of SPC in healthcare processes
+    </ul>
+    
+    <b>Week 14: Project Report</b>
+    <ul>
+	Finalizing the term project report.
+    </ul>
+
+    <b>Week 15: Term Project Presentation</b>
+    <br>
+    
+    
+</div>
+      </td>
+      </tr>
+</table>          
+    </body>
+      </html>

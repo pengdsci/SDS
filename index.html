@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+<html>                                    <!-- open html tag: required  -->
+
+  <head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>  
+      
+      <!-- open page header: required -->
+    <title>SDS-BS</title>      <!-- page title appears on the tab -->
+    
+  <style>   <!-- css style file -->
+        
+      body{
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+          }
+        
+      div{
+         font-family: Verdana, sans-serif;
+         color: black;
+         font-size: 11px;
+         padding-top:0px;
+         margin-bottom: 1px;
+      }
+      
+      p{
+         font-family: Verdana, sans-serif;
+         color: black;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+    	 h1, h2, h3, h4, h5, btn {
+		         font-family: Verdana, sans-serif; 
+             /*font-weight: bold;*/
+             font-variant: small-caps;	
+           }
+
+   link-btn {
+        background-color: purple;
+        color: gold;
+        border: 1px solid DodgerBlue;
+        padding: 5px 5px 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        height: 14px;
+        font-size: 12px;
+        font-weight: normal;
+        margin: 2px 2px 2px 2px;
+        cursor: pointer;
+        }
+      
+.collapsible {
+  background-color: white;
+  color: purple;
+  cursor: pointer;
+  padding: -2px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+      
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #451952;
+  color: gold;
+  text-align: left;
+  border-radius: 6px;
+  padding: 19px 19px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -1px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}  
+</style>
+ 
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  color: purple;
+  text-align: center;
+  background-color: darkpurple;
+  margin-top: 20px;
+}
+</style>     
+      
+  </head>     <!-- close page header: required -->
+  
+  <!-- All contents of the web page MUST be placed between <body> </body> -->
+  
+  <body style="background-image: url('img/bgIMG.jpg')">   <!-- open html body: required -->
+  <BR><BR>
+  
+   <table align = "center"  border = "0"  width=90%  bordercolor="gold"  bgcolor = "white">        
+     <tbody>
+     
+      <tr>
+      <!--create a margin to the left side of the table-->
+      <!--TD  style="background-image: url('img/TableBg.jpg'); width:2%;"></TD--> 
+      <!--TD bgcolor='#003366'--> 
+      <TD style="background-image: url('img/bgIMG0.jpg')" style="width:30%">
+        <table border = "0" bordercolor="darkgreen" align = "center"
+        width="100%" height = "100%" style = "border-spacing: 0"> 
+           <tr>
+            <TD style = "line-height: 20%;">
+                <BR><BR><BR><BR><BR><BR><BR><BR>
+                <!--img src="img/CP0.jpg" width=120 height=130-->
+                <center><h1  style="padding-bottom: 0px;"><font color = "gold">  SDS</font></h1>
+                <BR><br><br><BR><br><br>
+                <p><center> <font color = "lightgray">A Proposal for upgrading current</font>
+                    <br><br><BR><br><br><BR><br><br><font color = "skyblue" size = 3>Statistics Concentration </font> <br><br><BR><br><br><BR><br><br><font color = "lightgray">to a bachelor of science in </font><br><br><BR><br><br><BR><br><br> <font color = "gold" size = 3> Statistics and Data Science </font> <br><br><br></center></p>
+                <BR><BR><BR><BR><BR>
+                <hr color = "gray">
+            </TD>
+            <TD></TD>
+           </tr>
+         
+           <tr>
+            <TD style = "line-height: 30%;">
+                <h5><font color = "white">&nbsp; Program Hightlights</font></h5>
+                <p><font color = "lightgray">
+                    &nbsp; 1. Interdisciplinary and application oriented program<br>
+                    &nbsp; 2. Solid statistical and data science foundation  <br>
+                    &nbsp; 3. Strong programming skills<br>
+                    &nbsp; 4. Data and interactive technologies<br>
+                    &nbsp; 5. Technical writing and effective presentation <br><br>
+                    </p>
+                    <hr color="gray">
+            </TD>
+          </tr>
+         
+            <tr>
+            <TD style = "line-height: 30%;">
+                <h5><font color = "white">&nbsp; Credit Distribution: 120</font></h5>
+                <p><font color = "lightgray">
+                    &nbsp;  General Education Requirements: 40<br>
+                    &nbsp;  University Requirements (S, E, W, I): 21 <br>
+                    &nbsp;  MATH and STAT Requirements: 53 <br>
+                    &nbsp;  Cognates: 6<br>
+                    &nbsp;  Free Elective Requirements: 12<br><br>
+                    &nbsp;  <font color="gold">After excluding double/triple counting S, W, E courses, total credit hours: 120</font>   
+                    </p>
+                    <hr color="gray">
+            </TD>
+          </tr>
+                              
+            <tr>
+            <TD style = "line-height: 30%;">
+                <h5><font color = "white">&nbsp; SDS Minors</font></h5>
+                <p><font color = "lightgray">
+                    
+                    <br>>
+                    <!--/font></p0>
+                    <!--hr color="gray">
+                    <p0><font color = "lightgray"-->
+                    &nbsp;  <font color="gold">To be completed...</font>  </p>
+                    <hr color="gray">
+            </TD>
+          </tr>
+                    
+         <tr>
+            <TD>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </TD>
+         </tr>
+         
+         </table>
+        </TD>
+      
+         <!--create a margin to the contact and the major content columns of the major table-->
+         <TD style="width:2%"></TD>
+      
+        <TD style="width:64%">
+        <table>
+          <tr>
+           <TD  style = "line-height: 110%;">
+              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">Objective and Rationale</font></h4>
+               <!--font color = 'black' face="WildWest" size="4"-->
+                  <p><b>Objective</b><br>
+                   To create a BS degree in Statistics and Data Science (SDS) to increase the program enrollment and improve retention.</p>
+                 
+                  <p><b>Rationale</b><br>
+                  
+                  1. <i>The declining enrollment of current statistics concentration.</i><br>
+                    
+                    <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
+                       <tr>
+                           <th></th>
+                           <th>F2021</th>
+                           <th>S2022</th>
+                           <th>F2022</th>
+                           <th>S2023</th>
+                           <th>F2023</th>
+                           <th>S2024</th>
+                       </tr>
+                       <tr>
+                           <td><b>Stat Concentration</b></td>
+                           <td>41  </td>
+                           <td>45  </td>
+                           <td>46  </td>
+                           <td>44  </td>
+                           <td>37  </td>
+                           <td>26 </td>
+                      </tr>
+                      <tr>
+                          <td><b>Stat Minor</b></td>
+                          <td>73 </td>
+                          <td>54 </td>
+                          <td>57 </td>
+                          <td>38 </td>
+                          <td>41 </td>
+                          <td>45 </td>
+                      </tr>
+               </table> 
+                         
+                      
+                  <p>    
+                  
+                      
+                  2. <i>The skillset of fields shift due to new technologies and methodologies.</i><br> 
+                      
+                  3. <i>The development of dicipline specific and job-market relevant curriculumn.</i><br>   
+                      
+                      
+                  4. <i>The impact of the proposed degree program on the relevant programs</i><br>
+                          
+                  </p>
+                  <br>
+               <hr color="lightblue">
+            </TD>
+             
+         </tr>
+
+        <tr>
+           <TD style = "line-height: 110%;" background="img/Draft4Discussion.jpg">
+              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">Proposed Curriculum</font></h4>
+               <font color = 'black' face="WildWest" size="4">
+               
+               <p><b>General Education Requirements</b> (40 Credits)<br>
+                   
+                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
+                       <tr>
+                           <th>Courses</th>
+                           <th>Credits</th>
+                       </tr>
+                       <tr>
+                           <td>First Year Experience (FYE)  </td>
+                           <td>4  </td>
+                      </tr>
+                      <tr>
+                          <td>WRT 120/WRT 123 </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>WRT 200-Level Course </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Mathematics (MAT311 below) </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Diverse Communities "J" Course </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Interdisciplinary "I" Course </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Science (CSC 141 below) </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Science </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Behavior &amp; Social Science </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Behavior &amp; Social Science </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Humanities </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Humanities </td>
+                          <td>3 </td>
+                      </tr>
+                       <tr>
+                          <td>Arts </td>
+                          <td>3 </td>
+                      </tr>
+                      <td><b>Total</b> </td>
+                          <td>40 </td>
+                      </tr>
+               </table> 
+               </p>
+                   
+               <p><b>University Requirements</b> (21  Credits)<br>
+                   
+                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
+                       <tr>
+                           <th>Courses</th>
+                           <th>Credits</th>
+                           <th>Comments</th>
+                       </tr>
+                       <tr>
+                           <td>Two Writing Emphasis Courses  </td>
+                           <td>6  </td>
+                           <td>Two "W" courses in addition to ENG368, ENG371. <font color = "red">STA490 is a "W" course.</font><br> recommand ENG375 &amp; STA490 </td>
+                      </tr>
+                      <tr>
+                          <td>Three Speaking Emphasis Courses </td>
+                          <td>9 </td>
+                          <td> STA 490 is an "S" course</td>
+                      </tr>
+                       <tr>
+                          <td>Capstone Course </td>
+                          <td>3 </td>
+                          <td>STA490 is a capstone course</td>
+                      </tr>
+                       <tr>
+                          <td>Ethics Requirement </td>
+                          <td>3 </td>
+                          <td>STA320 is an "E" course</td>
+                      </tr>
+                      <tr>
+                          <td><b>Total</b><br><font color = "red">(excluding STA courses)</font> </td>
+                          <td>9 </td>
+                          <td><font color = "red">exclude STA 490 and STA320 credits which will be counted in statistics requirements. </font></td>
+                      </tr> 
+                       
+               </table></p>
+               
+               <p><b>Cognates</b> (6 Credits)<br>
+                   
+                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
+                       <tr>
+                           <th>Courses</th>
+                           <th>Credits</th>
+                           <th>Comments</th>
+                       </tr>
+                       <tr>
+                           <td>CSC 141 </td>
+                           <td>3  </td>
+                           <td>Choose the Python section. </td>
+                      </tr>
+                      <tr>
+                          <td>One Additional Course </td>
+                          <td>3 </td>
+                          <td>Choose from ENG358, ENG371 or ENG375.<br> <font color = "red">(need clearification)</font></td>
+                      </tr>
+                        <tr>
+                           <td><b>Total</b> </td>
+                           <td>6 </td>
+                           <td>  </td>
+                      </tr>
+                   </table></p>
+ 
+                     <p><b>Free Electives</b> (12 Credits)<br>
+                   Need to provide a list of suggested courses from STA and other programs.
+                         
+                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
+                       <tr>
+                           <th>Courses</th>
+                           <th>Credits</th>
+                           <th>Comments</th>
+                       </tr>
+                       <tr>
+                           <td>Free Elective </td>
+                           <td>3  </td>
+                           <td>  </td>
+                      </tr>
+                      <tr>
+                           <td>Free Elective </td>
+                           <td>3  </td>
+                           <td>  </td>
+                      </tr>
+                       <tr>
+                           <td>Free Elective </td>
+                           <td>3  </td>
+                           <td>  </td>
+                      </tr>
+                       <tr>
+                           <td>Free Elective </td>
+                           <td>3  </td>
+                           <td>  </td>
+                      </tr>
+
+                       <tr>
+                           <td><b>Total</b> </td>
+                           <td>12 </td>
+                           <td>  </td>
+                      </tr>
+            </table></p>
+               
+             <p><b>BS Statistics Major Requirements</b> (60 Credits)<br>
+                   
+                   <table style ="font-family: Verdana, sans-serif; color: black; font-size: 11px;         padding-top:0px; border-color: #96D4D4;" border=1>
+                       <tr>
+                           <th>Courses</th>
+                           <th>Credits</th>
+                           <th>Comments</th>
+                       </tr>
+                       <tr>
+                           <td><i class="tooltip"><font color = "red"> MAT125 Statistics I<sup><font color = "blue">Description</font></sup></font>
+                               <p0 class="tooltiptext">Introduction to probability, statistics, and statistical inference. Concepts include: descriptive statistics, probability, probability distributions, sampling distributions, confidence intervals, hypothesis testing, along with a formal introduction to linear regression and categorical data analysis. Statistical software, including but not limited to SPSS and Excel, will be used to facilitate the understanding of important statistical ideas and for the implementation of data analysis in many areas of application.<br>
+                                Pre / Co requisites: MAT 125 requires an appropriate score on the Mathematics Placement Exam.<br>
+                                Typically offered in Fall &amp; Spring.</p0>
+                             </i> </td>
+                           <td><font color = "red">3 </font> </td>
+                           <td><font color = "red">Math foundation</font>  </td>
+                      </tr>
+                      <tr>
+                           <td><font color = "red">MAT161 Calculus I</font> </td>
+                           <td><font color = "red">4 </font> </td>
+                           <td><font color = "red">Math foundation</font>  </td>
+                      </tr>
+                        <tr>
+                           <td><font color = "red">MAT243 Calculus and Linear ALgebra for Applied Statistics </font></td>
+                           <td><font color = "red">4</font>  </td>
+                           <td><font color = "red">Math foundation</font>  </td>
+                      </tr>
+                       
+                       <tr>
+                           <td><font color = "red">MAT325 Numerical Analysis </font></td>
+                           <td><font color = "red">3</font>  </td>
+                           <td><font color = "red">Math foundation,<font color = "blue"> need to adjust course content</font></font>  </td>
+                      </tr>
+                       
+                       <tr>
+                           <td>STA200 Statistics II </td>
+                           <td>3  </td>
+                           <td>Statistics foundation  </td>
+                      </tr>
+                        <tr>
+                            <td><i class="tooltip"><font color = "blue"> STA268 Interactive Exploratory Data Analysis<sup><sup><font color = "#451952"><b>New Course Description</b></font></sup></sup></font>
+                               <p0 class="tooltiptext">Introduce technologies required interactive exploratory data analysis to uncover hidden patterns in the massive and complex data and enhance effective analytic communications. Topics include web-based technologies and platforms, lower and high dimension descriptive statistics, data reduction, feature engineering, model-based information extraction, and the design of interactive visual representation. This course will assume some coding experience. A software program such Tableau and Qlick will also be used in the class. <br>
+                                Pre / Co requisites: STA 200, CSC141(Python) or Permission of the Instructor. <br>
+                                Typically offered in Fall &amp; Spring.</p0>
+                               </i></td>
+                           <td><font color = "blue">3  </font></td>
+                           <td><font color = "black">Statistics foundation </font> </td>
+                      </tr>
+                       <tr>
+                            <td><font color = "blue"><i class="tooltip"><font color = "blue"> STA288 Programmatic Visual Analytics<sup><sup><font color = "#451952"><b>New Course Description</b></font></sup></sup></font>
+                               <p0 class="tooltiptext">This is a programming-based visual analytics course focusing on using principles of visual design and interactive technologies to unveil trend and patterns from data through statistical modeling and data-driven algorithms. Topics include traditional design principles, strategies and elements in data visualization, programmatic approches to automation and realtime visualization, conditioning and marginalizing apparoaches to visualizing models and algorithms for high dimensional data, etc. Students will gain hands-on exoerience through a series topic specific mini-projects. 
+                                <br>
+                                Pre / Co requisites: STA 200, STA 268, CSC141(Python) or Permission of the Instructor. <br>
+                                Typically offered in Fall &amp; Spring.</p0>
+                               </i> </td>
+                           <td><font color = "blue">3  </font></td>
+                           <td><font color = "blue">SDS foundation </font> </td>
+                      </tr>
+                      <tr>
+                           <td>STA311 Statistical Computing </td>
+                           <td>3  </td>
+                           <td>Statistics foundation  </td>
+                      </tr> 
+                       <tr>
+                           <td>STA319 Applied Statistics </td>
+                           <td>3  </td>
+                           <td>Statistics foundation  </td>
+                      </tr> 
+                         
+                       <tr>
+                           <td>STA320 Experimental Design </td>
+                           <td>3  </td>
+                           <td>Statistics foundation, "E" Course  </td>
+                      </tr> 
+                       <tr>
+                           <td>STA321 Topics in Advanced Statistics <br>
+                           <font color = "brown">Suggested renaming: STA421 Practical Regression Modeling</font></td>
+                           <td>3  </td>
+                           <td>Statistics foundation  </td>
+                      </tr> 
+                       
+                       <tr>
+                            <td><i class="tooltip"><font color = "blue"> STA328 A First Course in Data Science<sup><sup><font color = "#451952"><b>New Course Description</b></font></sup></sup></font>
+                               <p0 class="tooltiptext">This is a non-technical and introductory course of data science using a programming language such as Python and R as the primary computational tool. The course will highlight data science as a process of integrating statistical models and machine learning algorithms to solve real world problems. Students will gain hands-on data science experience through various case studies and projects from different real-world problems. Topics include platforms and technological tools, data aquistion and integration, basics statistics and machine learning algorithms, methods of cross-validation, effective storytelling, and concepts of automation and deployment. 
+                               <br>    
+                               <b>Pre / Co requisites</b>: STA 319, STA 321, CSC141(Python) or Permission of the Instructor. 
+                                <br>
+                                Typically offered in Fall &amp; Spring.</p0>
+                               </i></td>
+                            <td><font color = "blue">3</font>  </td>
+                            <td><font color = "blue">SDS foundation</font>  </td>
+                      </tr>
+                       
+                        <tr>
+                           <td><i class="tooltip"><font color = "blue"> STA428 Statistical Methods for Data Science<sup><sup><font color = "#451952"><b>Course Description</b></font></sup></sup></font>
+                               <p0 class="tooltiptext">This course introduces statistical methods used in data science and data science algorithms rooted in statistics to reflect the symbiotic relationship between the two subjects. Students will gain hands-on experience in integrating tools in both subjects to solve real-world problems. Topics in clude probabibalistic and statistical models such as naive Bayes, algorithmic-based regression models and machine learning tools such as tree-based algorithms, latent regression for dimension reduction, support vector machine, and neural networks. The course emphsize application with commonly used software library 
+                                   
+                               Pre / Co requisites: STA 319, STA 321 (STA421), CSC 141(Python) or Permission of the Instructor. <br>
+                                Typically offered in Fall &amp; Spring.</p0>
+                               </i>  </td>
+                           <td><font color = "blue">3</font>  </td>
+                           <td><font color = "blue">SDS foundation</font>  </td>
+                      </tr>
+                       
+                       <tr>
+                           <td><font color = "darkgreen">STA419 Basics of Statistical Learning</font> </td>
+                           <td><font color = "darkgreen">3</font></td>
+                           <td><font color = "darkgreen">SDS foundation</font></td>
+                      </tr> 
+                       <tr>
+                           <td><font color = "red">MAT421 Mathematical Statistics I </font></td>
+                           <td><font color = "red">3 </font> </td>
+                           <td><font color = "red">Mathematics foundation </font> </td>
+                      </tr> 
+                       <tr>
+                           <td><font color = "red">MAT422 Mathematical Statistics II </font></td>
+                           <td><font color = "red">3  </font></td>
+                           <td><font color = "red">Mathematics foundation </font> </td>
+                      </tr> 
+                       <tr>
+                           <td>STA490 Statistics Capstone </td>
+                           <td>3  </td>
+                           <td>Statistics foundation. <br>University Required capstone, "W" and "S"  </td>
+                      </tr> 
+                      <tr>
+                           <td><b>Total</b><br><font color = "red">If STA320 and STA490 are considered as part of<br> the university requirement, the totak STA credit: 47</font> </td>
+                           <td>53  </td>
+                           <td><font color = "red">Math credits: 20 </font><br>
+                               <font color = "black">Stat credits: 21 </font><br>
+                               <font color = "blue"><b>SDS credits: 12 </b></font>
+                           </td>
+                      </tr> 
+                   </table></p>
+                  
+
+
+
+               <br><br>
+               </font>
+               <hr color="lightblue">
+            </TD>
+        </tr>
+
+        <tr>
+           <TD style = "line-height: 110%;">
+              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">SDS Minor Reqirements</font></h4>
+               <font color = 'black' face="WildWest" size="4">
+                  <p> write your professional experience here.....</p>
+                  <br><br>
+               </font>
+               <hr color="lightblue">
+            </TD>
+        </tr>
+       
+        <tr>
+           <TD style = "line-height: 110%;">
+              <h4 style="padding-bottom: 0px; margin: 0;"><font color = "#123456">List of Statistics and Data Science Courses</font></h4>
+              <p> All coueses in the following list carry 3 credits except for STA496, STA498, and STA499.</p>
+               
+               <!--font color = 'black' face="WildWest" size="4"-->
+               <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 200. Statistics II + </b></span>               
+               <p class="content">Continuation of MAT 121/MAT 125. Topics include inference about the means, standard deviations and proportions, goodness of fit, analysis of variance, regression analysis, correlation, and nonparametric tests. In addition, students will learn to use SPSS, a statistical analysis software that is available for free through the Ram Cloud. Finally, students will hone their technical writing skills by summarizing their statistical analyses with written reports.
+                      <br>
+                      <b>Pre / Co requisites</b>: STA 200 requires a prerequisite of a grade of C- or better in MAT 121, MAT 125 or ECO 251.
+                      <br>
+                       Distance education offering may be available.
+                      <br>
+                       Typically offered in Fall &amp; Spring.
+                    </p>
+               
+                <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 201. Statistical Methods for Political Polling + </b></span>
+               <p class="content">
+               The purpose of this course is to introduce students to the statistical methodology used in the analysis of data from a political survey. Topics will include sampling techniques, hypothesis testing, sample size calculation, categorical data analysis, simple linear regression, and ANOVA. There will be a field trip to the Center for Opinion Research at Franklin and Marshall College at the beginning of the semester.
+                       <br>
+                      <b>Pre / Co requisites</b>: STA 201 requires a prerequisite of MAT 121 or PSC 200.
+                       <br>
+                       Typically offered in Fall.
+                    </p>
+               
+                 <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 202. Sports Analytics + </b></span>
+                  <p class="content">
+                      In this course we will apply concepts such as regression, classification, clustering, decision trees and others to evaluate players and teams from baseball, basketball, football, hockey and soccer. We will also introduce the statistical programming language R in order to analyze recent (and large!) data sets.
+                       <br>
+                      <b>Pre / Co requisites</b>: STA 202 requires a prerequisite of a C- or higher in MAT 121, MAT 125, or ECO 251.
+                       <br>
+                       Typically offered in Fall.  
+                    </p>
+                    
+
+                  <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 203. Probability and Statistics in Gaming + </b></span>
+               <p class="content">
+                     In this class students will learn the important role that probability and statistics play in the enjoyment and development of games ranging from blackjack and the lottery to Battleship and World of Warcraft. Statistical topics include descriptive statistics, probability, discrete random variables, and multivariate linear modeling. Throughout the course students will use statistical tools to not only develop optimal strategies while gaming but also to analyze the current trends in contemporary gaming, determine which factors correlate with a game's popularity, and how to develop algorithms for computer opponents.
+                        <br>
+                       <b>Pre / Co requisites</b>: STA 203 requires a prerequisite of MAT 121 or MAT 125.
+                        <br>
+                       Typically offered in Spring.
+                    </p>
+               
+                     <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 268 Interactive Exploratory Data Analysis + </b><br><font color = "red">[A new course to be developed]</font></span>
+                   <p class="content">
+                     Introduce technologies required interactive exploratory data analysis to uncover hidden patterns in the massive and complex data and enhance effective analytic communications. Topics include web-based technologies and platforms, lower and high dimension descriptive statistics, data reduction, feature engineering, model-based information extraction, and the design of interactive visual representation. This course will assume some coding experience. A software program such Tableau and Qlick will also be used in the class.  
+                     <br>
+                     <b>Pre / Co requisites</b>: STA 200, CSC141(Python) or Permission of the Instructor. 
+                     <br>
+                     Typically offered in Fall &amp; Spring.
+                   </p>
+               
+               <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 288 Programmatic Visual Analytics + </b><br><font color = "red">[A new course to be developed]</font></span>
+                   <p class="content">
+                     This is a programming-based visual analytics course focusing on using principles of visual design and interactive technologies to unveil trend and patterns from data through statistical modeling and data-driven algorithms. Topics include traditional design principles, strategies and elements in data visualization, programmatic approches to automation and realtime visualization, conditioning and marginalizing apparoaches to visualizing models and algorithms for high dimensional data, etc. Students will gain hands-on exoerience through a series topic specific mini-projects. 
+                      <br>
+                      <b>Pre / Co requisites</b>: STA 200, STA 268, CSC141(Python) or Permission of the Instructor. 
+                       <br>
+                      Typically offered in Fall &amp; Spring.
+                   </p>
+               
+               
+                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 311. Intro Statistical Computing and Data Management + </b></span>
+                   <p class="content">
+                     Course will give students the ability to manage and manipulate data effectively, conduct basic statistical analysis, and generate reports and graphics primarily using the SAS Statistical Software Program.
+                         <br>
+                       <b>Pre / Co requisites</b>: STA 311 requires a prerequisite of MAT 121 or MAT 125.<br>
+                        Distance education offering may be available.
+                        <br>
+                        Typically offered in Spring.
+                   </p>
+                   
+                     <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 319. Applied Statistics + </b></span>
+                   <p class="content">
+                     This course will cover simple and multiple linear regression methods and linear time series analysis with an emphasis on fitting suitable models to data and testing and evaluating models against data.
+                       <br>
+                        <b>Pre / Co requisites</b>: STA 319 requires a prerequisite of C or better in (MAT 121 or MAT 125) and (MAT 143 or MAT 145 or MAT 161).<br>
+                       <br>
+                        Typically offered in Fall &amp; Spring.
+                   </p>
+                   
+                     <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 320. Experimental Design + </b><br><font color = "blue">[to be modified as sampling and survey design and analysis]</font></span>
+                   <p class="content">
+                     The purpose of this course is to guide students in learning how to design, conduct and analyze the results of scientific studies so that valid and objective inferences about the population are obtained. It will cover ANOVAs, block, factorial, and split plot designs, as well as response surface analysis.
+                       <br>
+                     <b>Pre / Co requisites</b>: STA 320 requires a prerequisite of C or better in MAT 121 or MAT 125.
+                       <br>
+                     Typically offered in Fall.
+                   </p>
+                   
+                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 321. Topics in Advanced Statistics + </b><br><font color = "blue">[suggest moving to 400 level, for example STA421, and renaming it as <i>Practical Regression Analysis</i>]</font></span>
+                   <p class="content">
+                     Course will cover select topics in categorical analysis, nonparametrics and time series analysis. Emphasis will be placed on statistical programming, particularly simulations.
+                       <br>
+                     <b>Pre / Co requisites</b>: STA 321 requires prerequisites of C or better in STA 311, STA 319, STA 320<font color="red">(sampling)</font>, and MAT 421.
+                     <br>
+                     Typically offered in <font color = "red">Fall</font>.
+                   </p>
+                   
+                     <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 328 Introduction to Data Science + </b><br><font color = "blue">[Pending for CAPC approval]</font></span>
+                   <p class="content">
+                     This is a non-technical and introductory course of data science using a programming language such as Python and R as the primary computational tool. The course will highlight data science as a process of integrating statistical models and machine learning algorithms to solve real world problems. Students will gain hands-on experience through a case study on an end-to-end data science project. Topics include components of data science process, tree-based algorithms, models for rare event predction, cross validation for model selection and performance KPIs. 
+                     <br>              
+                     <b>Pre / Co requisites</b>: STA 319, STA 320<font color="red">(sampling)</font>, CSC141(Python) or Permission of the Instructor. 
+                      <br>
+                     Typically offered in Spring.
+                       <br><br>
+                    <a href="DSCI-topicList.html"  target="popup" onclick="window.open('DSCI-topicList.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
+                       
+                   </p>
+                   
+                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 318 Statistical Process Control + </b><br><font color = "blue">[Pending for CAPC approval]</font></span>
+                   <p class="content">
+                     This is a non-technical and introductory course of data science using a programming language such as Python and R as the primary computational tool. The course will highlight data science as a process of integrating statistical models and machine learning algorithms to solve real world problems. Students will gain hands-on experience through a case study on an end-to-end data science project. Topics include components of data science process, tree-based algorithms, models for rare event predction, cross validation for model selection and performance KPIs. 
+                     <br>              
+                     <b>Pre / Co requisites</b>: STA 319, STA 320<font color="red">(sampling)</font>, CSC141(Python) or Permission of the Instructor. 
+                      <br>
+                     Typically offered in Spring.
+                         <br><br>
+                    <a href="SPC-topicList.html"  target="popup" onclick="window.open('SPC-topicList.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
+                       
+                   </p>
+               
+                   <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 408. Applications of Modern Nonparametric Statistics + </b><br><font color = "blue">[Pending for CAPC approval]</font></span>
+                   <p class="content">
+                     This is an applied statistics course focuses on modern nonparametric approaches to regression modeling and related applications. Topics include concepts of bootstrap methods,  local regression,  smoothing and spline regression, regression trees methods, concepts of semi-parametric methods, etc. The traditional rank-based non-parametric tests will also be briefly introduced. Students will gain hands-on experience through various data driven modeling projects. A formal programming language such as R and Python and related libraries will be used for data analysis.
+                     <br>
+                       <b>Pre / Co requisites</b>: STA 319, STA 320<font color="red">(sampling)</font>, CSC141(Python) or Permission of the Instructor. 
+                     <br>
+                     Typically offered in Fall.
+                     <br><br>
+                    <a href="NonParTopics.html"  target="popup" onclick="window.open('NonParTopics.html','name','width=500,height=600')" ><link-btn>Tentative Topics</link-btn></a>
+                       
+                      </p>
+               
+               
+                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 419. Basics of Statistical Learning + </b><br></span>
+                   <p class="content">
+                     This course will provide an introduction to statistical learning and predictive modeling. Tools will be developed for visualizing and understanding complex data sets. All data analysis will be done using the statistical programming language R.
+                     <br>
+                     <b>Pre / Co requisites</b>: STA 419 requires a prerequisite of a C or better in STA 319.
+                     <br>
+                     Distance education offering may be available.
+                     <br>
+                     Typically offered in Fall.
+                   </p>
+               
+                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 490. Capstone Course in Statistics + </b><br></span>
+                   <p class="content">
+                     Course will synthesize lessons learned throughout the students career with the goal of preparing students for work as professional statisticians. Topics will include report writing, presentations, statistical consulting, sampling design, and resume writing.
+                    <br>
+                     <b>Pre / Co requisites</b>: STA 490 requires prerequisites of ENG 368 or ENG 375 or ENG 371 and a C or better in STA 320<font color="red">(sampling)</font> and STA 321.
+                    <br>
+                     Typically offered in <font color = "red">Spring</font>.
+                   </p>
+               
+                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 496. Internship in Statistics and Data Science</b> <font color = "black">(1-2 credits)</font> <b>+ </b><br></span>
+                   <p class="content">
+                     In cooperation with regional businesses and industrial companies, student will perform an internship in applied mathematics..
+                    
+                    <br>
+                     Repeatable for credit.
+                   </p>
+               
+                    <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 498. Indepedent Study</b> <font color = "black">(1-3 credits)</font> <b>+ </b><br></span>
+                   <p class="content">
+                     Independent investigation of an area of statistics and data science not covered in the department's course offerings..
+                    <br>
+                     <b>Consent</b>: Permission of the Department required to add.
+                    <br>
+                     Repeatable for credit.
+                   </p>
+               
+               <span class="collapsible" style = "font-family: Verdana, sans-serif; color: purple; font-size: 12px;" ><b>STA 499. Undergraduate Thesis Research</b> <font color = "black">(up to 6 credits)</font> <b>+ </b> <br></span>
+                   <p class="content">
+                     Conduct an original research in the areas of statistics and data science.
+                    <br>
+                     <b>Consent</b>: Permission of the Department required to add.
+                    <br>
+                     Repeatable for credit.
+                   </p>
+               
+               
+               
+                   <br><br>
+               </font>
+               <hr color="lightblue">
+            </TD>
+        </tr>
+        
+        </table>
+       </TD>
+       <!--create a margin to the right side of the table-->
+       <TD style="width:2%"></TD>
+     </tr>
+     </tbody>
+    </table>
+    <BR><BR>
+  </body> <!-- close html body: required -->
+        <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+        
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+        
+</html> 
