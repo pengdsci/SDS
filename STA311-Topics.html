@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>                                    <!-- open html tag: required  -->
+
+  <head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>  
+      
+      <!-- open page header: required -->
+    <title>STA311</title>      <!-- page title appears on the tab -->
+    
+  <style>   <!-- css style file -->
+        
+      body{
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+          }
+        
+      div{
+         font-family: Verdana, sans-serif;
+         color: rebeccapurple;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+      p{
+         font-family: Verdana, sans-serif;
+         color: black;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+    	 h1, h2, h3, h4, h5, btn {
+		         font-family: Verdana, sans-serif; 
+             /*font-weight: bold;*/
+             font-variant: small-caps;	
+           }
+
+.collapsible {
+  background-color: white;
+  color: purple;
+  cursor: pointer;
+  padding: -2px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+      
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #451952;
+  color: gold;
+  text-align: left;
+  border-radius: 6px;
+  padding: 19px 19px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -1px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}  
+</style>
+ 
+     
+      
+  </head>     <!-- close page header: required -->
+  
+  <!-- All contents of the web page MUST be placed between <body> </body> -->
+  
+  <body>   <!-- open html body: required -->
+  <BR><BR>
+  <table>
+      <tr>
+          <td>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+
+<div>    
+<center><h2>STA 311 Statistical Computing and Data Management</h2>
+    <h3>Tentative Topics</h3></center>
+
+<hr><br>
+<b> Week  01</b>
+   <ul>
+    <li>Introduction 
+    <li><a href="https://wcupa.apporto.com/" target="popup" 
+                          onclick="window.open('https://wcupa.apporto.com/','name','width=900,height=500')">
+                         <link-btn>RamCloud SAS</link-btn></a> [need WCU login credential], or 
+    <li><a href="https://www.sas.com/en_us/software/on-demand-for-academics.html" target="popup" 
+                          onclick="window.open('https://www.sas.com/en_us/software/on-demand-for-academics.html','name','width=900,height=500')">
+                         <link-btn>SAS OnDemand for Academics</link-btn></a> [need to register an account with SAS]
+        
+    <li>Description of SAS 
+    <li>Concepts of programming 
+    <li>"Hello World!" - Your first SAS code 
+    </ul>
+<b> Week  02</b>
+   <ul> 
+    <li>Navigating SAS Environment 
+    <li>Storing and Accessing SAS Data Files 
+    <li>Coding Conventions and File/Folder Structure 
+    <li>Guidelines for Formatting and Commenting 
+    <li>Methods of Data Input: Column Input 
+    </ul>
+<b> Week  03 </b>
+   <ul>
+    <li>Input styles for raw data  
+       <ul>
+             <li>Column and list input 
+             <li>Formatted (column pointer) and hybrid input 
+    </ul>
+    <li>Avoiding truncation: LENGTH statement 
+    <li>Making your SAS data set more informative: LABEL statement 
+    <li>Reading specially formatted data correctly: FORMAT/INFORMAT 
+    <li>A first glance at SAS Dates 
+    <li>Reading external text data files: INFILE 
+    <li>Other good stuff: delimited file, data options- FIRSTOBS and OBS 
+    </ul>
+<b> Week  04 </b>
+   <ul>
+    <li>Loading complex data to SAS  
+       <ul>
+             <li>Missing values: DSD and MISSOVER 
+             <li>Delimited data: DLM 
+             <li>Non-standard variable formats: (&) and (:) 
+    </ul>
+    <li>Read in external data with input WIZARD: Excel, CSV, Text, etc. 
+    <li>PROC IMPORT: Excel, CSV, Text, and other formats such as SPPSS data 
+    <li>DATA step for CSV file: INFILE-INPUT 
+    <li>Load SAS data set to SAS: SET 
+    <li>PROC EXPORT: from SAS to CSV or other formats 
+    <li>Some control statements to modify an SAS data (if time permits) 
+    </ul>
+<b> Week  05 </b>
+   <ul>
+    <li>Read in TXT and CSV files  
+       <ul>
+             <li>DATA Step: INFILE-INPUT Statement 
+             <li>PROC IMPORT 
+    </ul>
+    <li>PROC MEANS  
+       <ul>
+             <li>Basic statistics 
+             <li>Output SAS data 
+    </ul>
+    <li>PROC FREQ: Basics  
+       <ul>
+             <li>Basic frequency tables 
+             <li>Output frequency tables as SAS data sets 
+    </ul>
+    <li>PROC UNIVARIATE:  
+       <ul>
+             <li>Basic descriptive statistics and histogram 
+             <li>Output analysis results as an SAS data set 
+    </ul>
+    </ul>
+<b> Week  06 </b>
+   <ul>
+    <li>Load SAS data file SAS data files  
+       <ul>
+             <li>SAS built-in permanent libraries 
+             <li>User-defined permanent libraries 
+    </ul>
+    <li>SAS Statistical Graphic Procedures  
+       <ul>
+             <li>SAS ODS Graphics 
+             <li>PROC SGPLOT 
+    </ul>
+    <li>Basic Statistical plots  
+       <ul>
+             <li>Histogram 
+             <li>Bar chart              
+             <li>Scatter Plot 
+             <li>Density Curve 
+             <li>Box plot 
+             <li>Simple Linear Regression Lines 
+    </ul>
+    </ul>
+<b> Week  07 </b>
+   <ul>
+    <li>Subsetting and Splitting 
+    <li>Subsetting Records  
+       <ul>
+             <li>Partial Reading- FIRSTOBS, OBS 
+             <li>Conditional extraction: IF-THEN-ELSE, WHERE 
+    </ul>
+    <li>Subsetting Variables  
+       <ul>
+             <li>Selecting designate variables: SELECT 
+             <li>Dropping designate variables: DROP 
+    </ul>
+    <li>Splitting Data - generating multiple datasets  
+       <ul>
+             <li>Conditional output of multiple data sets: IF-THEN-OUTPUT, SELECT-WHEN-OUTPUT-END 
+    </ul>
+       </ul>
+<b> Week  08 </b>
+   <ul>
+    <li>one-to-one reading: multiple SET statements 
+    <li>Concatenating: SET statement with multiple datasets 
+       <ul> 
+             <li>Data options: RENAME, DROP, and KEEP 
+    </ul>
+    <li>Interleaving Data: BY statement 
+    <li>Match Merging  
+       <ul>
+             <li>IN option for invisible dummy variables 
+             <li>Subsetting by conditioning on the "ghost" variables
+    </ul>
+     <li>Real-world application: Creating an analytical dataset from multiple sources 
+    </ul>
+<b> Week  09 </b>
+   <ul>
+    <li>SAS Date and Time Functions 
+    <li>Automatic Variables 
+    <li>Defining New Variables 
+    <li>Variable type conversion 
+    <li>Use of Logical Expressions 
+    <li>Operators with WHERE statement 
+    <li>Real-world application 
+    <li>Real-world application: Creating an analytical dataset from the COVID-19 county data 
+    </ul>
+<b> Week  10 </b>
+   <ul>
+    <li>SAS Character Functions  
+       <ul>
+             <li>Handling Leading Zeros and Substring Extraction: INDEXC, SUBSTR, LENGTH, and LEFT 
+             <li>Substring Substitution: TRANSLATE 
+             <li>Handling Blanks: COMPRESS, COMPBL, TRIM 
+             <li>Concatenation: CATs family of functions 
+    </ul>
+    <li>SAS DO-Block: DO-loop, DO-UNTIL, DO-WHILE Loops 
+    <li>RETAIN with DO-block: Within Group Operations in Longitudinal Data 
+    </ul>
+<b> Week  11 </b>
+   <ul>
+    <li>More SAS Loops 
+    <li>SAS ARRAYS  
+       <ul>
+             <li>Syntax 
+             <li>Basic types of SAS ARRAYs 
+             <li>Applications of ARRAYs 
+    </ul>
+    <li>Reshape Data  
+       <ul>
+             <li>ARRAY Approach 
+             <li>PROC TRANSPOSE 
+    </ul>
+    </ul>
+<b> Week  12  </b>
+   <ul>
+    <li>SAS ODS Output Files  
+       <ul>
+             <li>Syntax 
+             <li>Types of file destinations (file format) 
+             <li>Save output files with the desired format 
+             <li>ODS Graphics 
+    </ul>
+    <li>Optional Topics  
+       <ul>
+             <li>PROC REPORT (details to be covered next week) 
+             <li>SAS MACRO: An Example 
+         </ul>
+    </ul>
+<b> Week  13  </b>
+   <ul>
+    <li>PROC REPORT  
+       <ul>
+             <li>Basic Report 
+             <li>DEFINE statement and options: 
+             <li>COMPUTED Block for defining the new column 
+             <li>Options GROUP and ACROSS 
+    </ul>
+    <li>Enhancing the Appearance of PROC REPORT Output 
+    <li>The ODS Destination and Exporting Report 
+    </ul>
+<b> Week  14</b>
+   <ul> 
+    <li>Basic SAS MACROs 
+    <li>MACRO Variable 
+    <li>MACRO with No Parameters 
+    <li>MACRO with Parameters 
+       <ul>
+             <li>Passing Positional Parameters 
+             <li>Passing Keyword Parameters 
+             <li>The mixture of Positional and Keyword Parameter
+    </ul>
+    </ul>
+    
+<br>
+</div>
+      </td>
+      </tr>
+</table>          
+    </body>
+      </html>

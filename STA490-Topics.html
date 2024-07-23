@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>                                    <!-- open html tag: required  -->
+
+  <head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>  
+      
+      <!-- open page header: required -->
+    <title>STA490</title>      <!-- page title appears on the tab -->
+    
+  <style>   <!-- css style file -->
+        
+      body{
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+          }
+        
+      div{
+         font-family: Verdana, sans-serif;
+         color: rebeccapurple;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+      p{
+         font-family: Verdana, sans-serif;
+         color: black;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+    	 h1, h2, h3, h4, h5, btn {
+		         font-family: Verdana, sans-serif; 
+             /*font-weight: bold;*/
+             font-variant: small-caps;	
+           }
+
+.collapsible {
+  background-color: white;
+  color: purple;
+  cursor: pointer;
+  padding: -2px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+      
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #451952;
+  color: gold;
+  text-align: left;
+  border-radius: 6px;
+  padding: 19px 19px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -1px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}  
+</style>
+ 
+     
+      
+  </head>     <!-- close page header: required -->
+  
+  <!-- All contents of the web page MUST be placed between <body> </body> -->
+  
+  <body>   <!-- open html body: required -->
+  <BR><BR>
+  <table>
+      <tr>
+          <td>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+
+<div>    
+<center><h2>STA 490 Statistics Capstone</h2>
+    <h3>Tentative Topics</h3></center>
+
+<hr><br>
+<b>Week 01:  Logistics and Technical Tools </b>
+    <ul>
+     <li>  A laptop with relevant software programs installed.
+     <li>  Outline of the topics for the semester
+     <li>  Computational tools and platforms: R, RStudio, R Markdown, and GitHub
+    </ul>
+
+<b>Week 02:  Creating Online Resume and Personal Webpage </b>
+    <ul>
+     <li>  Getting started with basic HTML.
+     <li>  HTML Tags for RMarkdown and concepts of CSS
+     <li>  Templates of personal web pages  
+     <li>  Set up your professional web page on GitHub.
+     <li>  Create and publish your online CV on GitHub
+    </ul>
+
+<b>Week 03: Effective Communication with Web Technologies: HTML presentation</b>
+    <ul>
+     <li>  Presentation formats in RMarkdown
+     <li>  RMarkdown presentation template: Ninja presentation
+     <li>  Prepare an HTML presentation based on a project completed in STA321.
+    </ul>
+
+<b>Week 04:  Effective Presentation and Communication</b>
+    <ul>
+     <li>  Effective writing of reports
+     <li>  The role of visual aids
+     <li>  Effective delivery of oral presentation
+    </ul>
+
+<b>Week 05:  Oral Presentation #1</b>
+    <ul>
+     <li>  20-minute team presentation (small two-member team).
+     <li>  Pre-defined rubrics for evaluation contents and aesthetic designs of the presentation
+    </ul>
+         
+<b>Week 06:  Basics of EDA</b>
+    <ul>
+     <li>  EDA  methods and techniques
+     <li>  Commonly used EDA techniques
+     <li>  Applications of EDA
+     <li>  EDA process
+    </ul>
+
+<b>Week 07: Sampling A Finite Population – Methods and Techniques </b>
+    <ul>  
+     <li>  Defining study population
+     <li>  Four probability-based sampling plans
+     <li>  Implementation of sampling plans with a real-life data set
+    </ul>
+
+<b>Week 08: Finalize Sampling Project and HTML Presentation Slides</b>
+    <ul>
+     <li>  Drafting a formal sampling report individually (not a team report).
+     <li>  Preparing team presentation slides in HTML format with your teammates
+    </ul>
+
+<b>Week 09: Oral Presentation #2</b>
+    <ul>
+     <li>  20-minute oral presentation
+     <li>  Using the same rubrics to evaluate the presentation based on content and design.
+    </ul>
+
+<b>Week 10: Basics of Survey Design</b>
+    <ul>
+     <li>  Basics of survey designs: focus on multi-item instrument design
+     <li>  Relationship between sampling and survey design
+     <li>  Implementation of sample survey
+     <li>  Handling missing values in survey data
+    </ul>
+
+<b>Week 11:  Validity and Reliability of Survey</b>
+    <ul>
+     <li>  Evaluating survey instruments with multi-items: validity and reliability
+     <li>  EDA for processing survey data
+     <li>  Case study with real survey instruments
+    </ul>
+
+<b>Week 12: Principal component analysis approach to analyzing survey data.</b>
+    <ul>
+     <li>  First consulting meeting on a new survey study on students’ experience and satisfaction.
+     <li>  Introduction to Principal Component Analysis
+     <li>  A case study using PCA on self-compassion and gratitude survey.
+    </ul>
+
+<b>Week 13: Structure Statistical Analysis Plan (SAP) and Project Proposal</b>
+    <ul>
+     <li>  The importance and benefit of SAP.
+     <li>  Develop SAP for the final project based on the experience/satisfaction survey.
+    </ul>
+
+<b>Week 14:  Preparing Project Report and preparing the final oral presentation.</b>
+    <ul>
+     <li>  Critical reading of each team’s SAP
+     <li>  Finalize report. 
+     <li>  Preparing oral presentation slides in HTML format
+    </ul>
+
+<b>Week 15:  Oral Presentation #3</b>
+    <ul>
+     <li>  Final project presentation. Each team has 20 minutes (including 5 minutes for QA).
+     <li>  Presentation report and slide due.
+    </ul>
+    
+<br>
+</div>
+      </td>
+      </tr>
+</table>          
+    </body>
+      </html>

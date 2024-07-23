@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>                                    <!-- open html tag: required  -->
+
+  <head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>  
+      
+      <!-- open page header: required -->
+    <title>STA319</title>      <!-- page title appears on the tab -->
+    
+  <style>   <!-- css style file -->
+        
+      body{
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+          }
+        
+      div{
+         font-family: Verdana, sans-serif;
+         color: rebeccapurple;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+      p{
+         font-family: Verdana, sans-serif;
+         color: black;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+    	 h1, h2, h3, h4, h5, btn {
+		         font-family: Verdana, sans-serif; 
+             /*font-weight: bold;*/
+             font-variant: small-caps;	
+           }
+
+.collapsible {
+  background-color: white;
+  color: purple;
+  cursor: pointer;
+  padding: -2px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+      
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #451952;
+  color: gold;
+  text-align: left;
+  border-radius: 6px;
+  padding: 19px 19px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -1px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}  
+</style>
+ 
+     
+      
+  </head>     <!-- close page header: required -->
+  
+  <!-- All contents of the web page MUST be placed between <body> </body> -->
+  
+  <body>   <!-- open html body: required -->
+  <BR><BR>
+  <table>
+      <tr>
+          <td>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+
+<div>    
+<center><h2>STA 319 Applied Statistics</h2>
+    <h3>Tentative Topics</h3></center>
+
+<hr><br>
+
+<b>Introduction</b>
+    <ul>
+     <li> Syllabus/Installation of R and R studio
+     <li> Stat I review-descriptive statistics and graphs 
+    </ul>
+    
+    <b>Introduction to Bivariate Data</b>
+    <ul>
+     <li> Scatterplots
+     <li> linear correlation
+     <li> Simple Linear Regression
+     <li> Method of Least Squares 
+    </ul>
+    
+    <b>Model Utility: </b>
+    <ul>
+     <li> Inference about Slope
+     <li> R<sup>2</sup>
+     <li> Coefficient of Variation
+    </ul>  
+
+    <b>Prediction and Estimation</b>
+    
+    <b>Introduction to Multiple Linear Regression</b>
+    <ul>
+     <li> first order model with quantitative predictors
+     <li> model utility: F-test, adj R2
+    </ul>
+    
+    <b>Interaction model</b>
+    <ul>
+     <li> Quadratic model
+     <li> Dummy variables 
+    </ul>
+    
+    <b>Nested models</b>
+    
+    <b>Residual analysis</b>
+    <ul>
+     <li> Normality
+     <li> Lack of Fit
+     <li> Heteroscedasticity
+    </ul>
+    
+    <b>Outliers and Influential Observations </b>
+    <ul>
+     <li> Cook’s distance and leverage 
+     <li> Durbin-Watson Test 
+    </ul>
+    
+    <b>Some Regression Pitfalls: </b>
+    <ul>
+     <li> Parameter Estimability
+     <li> Multicollinearity
+     <li> Extrapolation
+    </ul>
+    
+    <b>Variable Screening Methods</b>
+    <ul>
+     <li> Stepwise regression
+     <li> Best subsets
+    </ul>
+    
+    <b>Data wrangling in R</b>
+    <ul>
+     <li> Introduction to Time Series [CLO5, 6] 
+     <li> Forecasting Using Smoothing Techniques
+    </ul>
+    
+    <b>Forecasting Using Regression Models</b>  [CLO5,6]
+    
+    
+<br>
+</div>
+      </td>
+      </tr>
+</table>          
+    </body>
+      </html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>                                    <!-- open html tag: required  -->
+
+  <head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>  
+      
+      <!-- open page header: required -->
+    <title>SPC</title>      <!-- page title appears on the tab -->
+    
+  <style>   <!-- css style file -->
+        
+      body{
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+          }
+        
+      div{
+         font-family: Verdana, sans-serif;
+         color: rebeccapurple;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+      p{
+         font-family: Verdana, sans-serif;
+         color: black;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+    	 h1, h2, h3, h4, h5, btn {
+		         font-family: Verdana, sans-serif; 
+             /*font-weight: bold;*/
+             font-variant: small-caps;	
+           }
+
+.collapsible {
+  background-color: white;
+  color: purple;
+  cursor: pointer;
+  padding: -2px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+      
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #451952;
+  color: gold;
+  text-align: left;
+  border-radius: 6px;
+  padding: 19px 19px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -1px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}  
+</style>
+ 
+     
+      
+  </head>     <!-- close page header: required -->
+  
+  <!-- All contents of the web page MUST be placed between <body> </body> -->
+  
+  <body>   <!-- open html body: required -->
+  <BR><BR>
+  <table>
+      <tr>
+          <td>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+
+<div>     
+    
+<center><h2>Programmatic Visual Analytics</h2>
+    <h3>Tentative Topics</h3></center>
+<hr><br>
+    
+<b>Module 01: Introduction and Logistics</b><br>
+      <ul>  
+       <li>  Scope of this course
+       <li>  Installation of R, R Studio, and LaTex
+       <li>  Introduction to RMarkdown
+       <li>  RMarkdown template for course project reporting
+       <li>  Set up GitHub repository and file transferring
+       <li>  Viewing web-format files from GitHub
+      </ul>
+<b>Module 02: Visualization Versus Visual Analytics</b><br>
+      <ul>   
+       <li>  Data visualization focuses on
+              <ul>
+               <li>  displaying hidden patterns from data
+               <li>  assisting with information extraction
+             </ul>
+       <li>  Visual analytics emphasizes
+              <ul>
+               <li>  analytical reasoning about the data
+               <li>  combining computational analysis
+               <li>  using interactive visualization techniques
+             </ul>
+      </ul>
+<b>Module 03: R Data Types and Base Libraries </b><br>
+      <ul>  
+       <li>  Fundamentals of R programming
+              <ul>
+               <li>  R Syntax
+               <li>  Operators
+               <li>  Variables – data types and objects
+               <li>  Data structures – matrices, lists, data frames, etc.
+             </ul>
+       <li>  R base libraries
+       <li>  R graphical libraries
+      </ul>
+<b>Module 04: R Control Flow and User-Defined Function</b><br>
+      <ul>   
+       <li>  R control statements: structure and types
+       <li>   R Functions
+              <ul>
+               <li>  Built-in functions in base R
+               <li>  User-defined functions
+             </ul>
+      </ul>
+<b>Module 05: Preparing Data for Visualization</b><br>
+      <ul>  
+       <li>  Basic data management tasks
+              <ul>
+               <li>  Sorting data
+               <li>  Merging data
+               <li>  Aggregating data 
+               <li>  Reshaping
+               <li>  Subsetting
+               <li>  Data type conversion
+             </ul>
+       <li>  Use base R functions 
+       <li>  Use Tidyverse library
+      </ul>
+<b>Module 06: Data Visualization Process and Principles</b><br>
+      <ul>  
+       <li>  Design concepts of visualization: graphical and informational designs
+       <li>  Gestalt’s principles of visual perception
+       <li>  Graphical elements of a plot: marks and channels
+       <li>  Pre-attentive attributes
+       <li>  Use of colors
+       <li>  Principles of visual encoding – expressiveness and effectiveness
+      </ul>
+<b>Module 07: Base R Plotting System</b><br>
+      <ul>  
+       <li>  Base R graphic devices
+       <li>  High-level plot functions and global graphical parameters 
+       <li>  Low-level plotting functions
+       <li>  The power of par() function R graphics
+       <li>  Exporting base R plots
+      </ul>
+<b>Module 08: Annotation – Additional Information Layer  </b><br>
+      <ul>  
+       <li>  Including text annotation
+       <li>  Adding geometric objects
+       <li>  Embedding an image
+       <li>  Adding a sub-plot to the existing plot
+      </ul>
+<b>Module 09: GGPlot2 Basics </b><br>
+      <ul>  
+       <li>  ggplot2 syntax and theory
+       <li>  ggplot layers
+       <li>  Aesthetics and Stats
+       <li>  ggplot themes
+      </ul>
+<b>Module 10: Interactive  Visual Representation </b><br>
+      <ul>  
+       <li>  Interactive visualization and its benefits
+       <li>  Use of popover and tooltips
+       <li>  Rendering interactivity
+       <li>  R libraries for interactive visualization
+       <li>  Plotly package in R
+       <li>  Integrating plotly with ggplot.
+      </ul>
+<b>Module 11: Visualizing Spatial Information – R Maps</b><br>
+      <ul>  
+       <li>  Basics of a map structure
+       <li>  Geocode versus shape files
+       <li>  Choropleth and scatter maps
+       <li>  Annotating maps
+       <li>  R maps libraries
+       <li>  Use of leaflet() library
+      </ul>
+<b>Module 11: Visualizing Temporal Information</b><br>
+      <ul>  
+       <li>  Univariate time series
+       <li>  Multivariate time series
+       <li>  Longitudinal data
+       <li>  R libraries for static and interactive  time series
+      </ul>
+<b>Module 12: Visualizing Special Patterns </b><br>
+      <ul>  
+       <li>  Hierarchical cluster patterns
+       <li>  Patterns in massive data
+       <li>  Overlapped data points 
+      </ul>
+<b>Module 13: Ethic Considerations of Data Visualization</b><br>
+      <ul>  
+       <li>  Ethical visualization
+       <li>  Ethical principles in visualization
+              <ul>
+               <li>  Accuracy and honesty
+               <li>  Clarity and simplicity
+               <li>  Fairness and objectivity
+               <li>  Privacy and trust
+               <li>  Inclusiveness and accessibility
+             </ul>
+       <li>  Pitfalls and practice to be avoided
+      </ul>
+
+<b>Module   14: Finalizing Term Project</b><br>
+          <ul>
+       <li>  Drafting project report
+       <li>  Creating web-based interactive presentation slides
+          </ul>
+
+
+    
+    
+</div>
+      </td>
+      </tr>
+</table>          
+    </body>
+      </html>

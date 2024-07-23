@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>                                    <!-- open html tag: required  -->
+
+  <head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>  
+      
+      <!-- open page header: required -->
+    <title>STA319</title>      <!-- page title appears on the tab -->
+    
+  <style>   <!-- css style file -->
+        
+      body{
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+          }
+        
+      div{
+         font-family: Verdana, sans-serif;
+         color: rebeccapurple;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+      p{
+         font-family: Verdana, sans-serif;
+         color: black;
+         font-size: 11px;
+         padding-top:1px;
+         line-height: 16px;   /* within paragraph */
+         margin-bottom: 15px; /* between paragraphs */
+      }
+      
+    	 h1, h2, h3, h4, h5, btn {
+		         font-family: Verdana, sans-serif; 
+             /*font-weight: bold;*/
+             font-variant: small-caps;	
+           }
+
+.collapsible {
+  background-color: white;
+  color: purple;
+  cursor: pointer;
+  padding: -2px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+      
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 350px;
+  background-color: #451952;
+  color: gold;
+  text-align: left;
+  border-radius: 6px;
+  padding: 19px 19px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -1px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}  
+</style>
+ 
+     
+      
+  </head>     <!-- close page header: required -->
+  
+  <!-- All contents of the web page MUST be placed between <body> </body> -->
+  
+  <body>   <!-- open html body: required -->
+  <BR><BR>
+  <table>
+      <tr>
+          <td>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+
+<div>    
+<center><h2>STA 319 Applied Statistics</h2>
+    <h3>Tentative Topics</h3></center>
+
+<hr><br>
+<b>Week 1: Setting up computing tools</b>
+      <ul> 
+      <li>   Introduction: class structure, topics, assessments, and logistics.
+      <li>   Install R, RStudio, and possibly MikTex
+      <li>   Create R Markdown document- Knit HTML, PDF, and WORD file
+      <li>   Getting started with R: basic operations, vectors, data frames (R data sets).
+      <li>   Install and load R libraries
+      <li>   GitHub repository
+      </ul> 
+<b>Week 2: Nonparametric Bootstrap Inferences </b>
+      <ul> 
+      <li>   Review of simple random sampling (SRS) plan
+      <li>   Sampling from empirical distribution – Bootstrap sampling
+      <li>   Bootstrap confidence intervals 
+      <li>   Bootstrap hypothesis tests
+      <li>   R Applications: Case study – CI and testing about population means
+      </ul> 
+<b>Week 3: Review: Correlation and Simple Linear Regression </b>
+      <ul> 
+      <li>   Relationship between two numerical variables
+      <li>   Linear relationship: the strength of linear correlation -coefficient of correlation 
+      <li>   Least square regression model – structure, assumptions, and interpretation
+      <li>   Diagnostics, R square, and interpretation
+      <li>   R Applications: Case study - simple linear regression (SLR) with R.
+      </ul> 
+<b>Week 4: Multiple Regression </b>
+      <ul> 
+      <li>   Turn categorical predictor variables into dummy variables
+      <li>   Assumptions, Goodness-of-fit measures, and diagnostics
+      <li>   Variable selection methods
+      <li>   Summarizing output and interpreting coefficients and R square
+      <li>   R Applications: Case study - MLR with R 
+      </ul> 
+<b>Week 5:   Nonparametric Bootstrapping Regression Modeling</b>
+      <ul> 
+      <li>   Bootstrapping records
+      <li>   Bootstrapping residuals
+      <li>   Bootstrap confidence intervals of regression coefficients
+      <li>   Bootstrapping test for regression coefficients
+      <li>   R Applications: Case study – Bootstrapping regression modeling
+      <li>   Mini Project #1: Project Report – Bootstrap multiple regression model
+      </ul> 
+<b>Week 6: Categorical Regression – Simple Logistic Regression</b>
+      <ul> 
+      <li>   Practical question and model formulation
+      <li>   Structure of the model
+      <li>   Interpretation of the regression coefficients
+      <li>   R Applications: Case study – fitting logistic regression with R 
+      </ul> 
+<b>Week 7: Categorical Regression – Multiple Logistic Regression</b>
+      <ul> 
+      <li>   Models with only categorical predictor variables – Dummy variable
+      <li>   Interpretation of coefficients
+      <li>   Variable selection methods and criteria
+      <li>   R Applications: Case study - logistic regression with R 
+      </ul> 
+<b>Week 8: Predictive Modeling with Logistic Regression</b>
+      <ul> 
+      <li>   Measures of predition performance
+      <li>   Confusion matrix and predictive errors
+      <li>   Cross-validation and ROC curve
+      </ul> 
+ 
+<b>Week 9: Frequency Regression - Simple Poisson Regression</b>
+      <ul> 
+      <li>   Practical question and model formulation
+      <li>   Model structure and interpretation
+      <li>   Regression on rates
+      <li>   R Applications: Case-study - fitting counts and rates in biology
+      </ul> 
+<b>Week 10: Dispersed Poison Regression Modeling</b>
+      <ul> 
+      <li>   Poison regression with more than one predictor variable
+      <li>   Categorical predictor variable – dummy variables must be defined
+      <li>   Issues of overdispersion and underdispersion
+      <li>   Quasi-Poisson models
+      </ul> 
+  
+<b>Week 11: Concepts of Time Series</b>
+      <ul> 
+      <li>   The nature of time series data – Dependency between observations 
+      <li>   The purpose of time series – forecasting 
+      <li>   Autocorrelation and moving average
+      <li>   Measures of goodness-of-forecasting
+      <li>   Types and approaches to time series modeling
+      <li>   R Applications: Illustrative examples of time series using R
+      </ul> 
+<b>Week 12: Moving Average and LOESS Smoothing</b>
+      <ul> 
+      <li>   Decompose a time series: trend, seasonality, and random error.
+      <li>   Additive and multiplicative models
+      <li>   The moving average (MA) and double MA models
+      <li>   LOESS smoothing model: fitting, forecasting, and evaluating
+      <li>   R Applications: Case study – LOESS smoothing and forecasting
+      </ul> 
+<b>Week 13: Exponential Smoothing Models</b>
+      <ul> 
+      <li>   Single exponential smoothing models
+      <li>   Holt’s trend models 
+      <li>   Holt-Winters’ seasonal models 
+      <li>   Model selection – measures of accuracy.
+      <li>   R Applications: Case-study – examples of exponential smoothing.
+      </ul> 
+<b>Week 14: Preparing project presentation</b>
+      <ul> 
+      <li>   The types of models: Linear models, GLM, and time series models (smoothing)
+      <li>   Choose one of the three projects to present to the class
+      <li>   Submit a PPT presentation by the end of Friday via D2L.
+      <li>   Each presentation allows 15 minutes: 10 minutes for presenting and 5 minutes for QA.
+      </ul>
+    
+<br>
+</div>
+      </td>
+      </tr>
+</table>          
+    </body>
+      </html>
